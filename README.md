@@ -2,4 +2,4 @@
 
 project usess flask interface to  Visualizing Spline of an image
 
-run 
+run app.py and deploy flask app
