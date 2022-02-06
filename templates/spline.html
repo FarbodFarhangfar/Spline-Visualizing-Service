@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center; size: 50em">
+    <b>{{ user_image }}</b><br><br>
+    <img src="{{ url_for('static', filename=user_image) }}" alt="User Image"><br><br>
+    <form method="post" action='/tck'>
+            <input type="hidden" name="dir" value={{ original }}/>
+
+            <label for="T">insert T: </label>
+            <input style="width: 50em;" type="text" name="T" id="T"><br><br>
+            <p>example input for T:
+                0.|0.|0.|0.|0.14285714|0.28571429|0.42857143|0.57142857|0.71428571|0.85714286|1.|1.|1.|1.</p><br><br>
+
+            <label for="C">insert C: </label>
+            <input style="width: 50em" type="text" name="C" id="C"><br><br>
+            <p>example input for C:
+                (0,495)|(60,400)|(190,500)|(355,400)|(415,380)|(445,400)|(515,340)|(640,435)|(740,400)|(1000,600)</p>
+            <p style="font-weight: bold">please don't use space</p>
+            <br>
+
+            <label for="K">insert K: </label>
+            <input style="width: 50em" type="text" name="K" id="K"><br><br>
+
+            <input type="submit" value="Submit">
+
+    </form>
+
+</div>
+
+</body>
+</html>
